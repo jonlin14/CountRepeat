@@ -9,6 +9,8 @@
 #### Test Driven Development
 #### PHP/HTML
 
+#### Setup Instructions
+##### Download all attached files. Host a local server. Input the local server address in the address bar. 
 
 ### COPYRIGHT @ LIndustries Consolidated
 ####### All rights reserved
