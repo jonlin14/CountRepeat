@@ -33,5 +33,15 @@
 
             $this->assertEquals($result, 1);
         }
+
+        function test_repeatCounter_twoWordTwoLetterOneMatch() {
+            $test_repeatCounter = new RepeatCounter;
+            $input_search = 'md';
+            $input_sentence = 'md ok';
+
+            $result = $test_repeatCounter->countRepeats($input_search, $input_sentence);
+
+            $this->assertEquals($result, 1);
+        }
     }
 ?>
