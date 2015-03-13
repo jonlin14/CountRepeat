@@ -1,11 +1,28 @@
 <?php
     class RepeatCounter {
-        function countRepeats($input_search, $input_sentence) {
+
+        private $word;
+        private $sentence;
+
+        function __construct($input_word, $input_sentence) {
+            $this->word = $input_word;
+            $this->sentence = $input_sentence;
+        }
+
+        function getWord() {
+            return $this->word;
+        }
+
+        function getSentence() {
+            return $this->sentence;
+        }
+
+        function countRepeats() {
             $amount_of_appereances = 0;
-            $sentence_array = explode( " ", $input_sentence);
+            $sentence_array = explode( " ", $this->sentence);
 
             foreach ($sentence_array as $word_in_sentence) {
-                if ($input_search == $word_in_sentence) {
+                if ($this->word == $word_in_sentence) {
                     $amount_of_appereances += 1;
                 }
             }
