@@ -12,4 +12,9 @@
         return $app['twig']->render("home.twig");
     });
 
+    $app->get("results", function() use($app) {
+        $countClass = new RepeatCounter;
+        $results = $countClass->countRepeats($_GET["input_word"], $_GET["input_sentence"]);
+        return $app['twig']->render("results.twig", array('result1' => $results));
+    });
     return $app;
