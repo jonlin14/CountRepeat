@@ -43,5 +43,15 @@
 
             $this->assertEquals($result, 1);
         }
+
+        function test_repeatCounter_twoWordsOneMatch() {
+            $test_repeatCounter = new RepeatCounter;
+            $input_search = "apple";
+            $input_sentence = "apple appl";
+
+            $result = $test_repeatCounter->countRepeats($input_search, $input_sentence);
+
+            $this->assertEquals($result, 1);
+        }
     }
 ?>
