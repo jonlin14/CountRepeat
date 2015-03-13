@@ -14,7 +14,7 @@
 
     $app->get("results", function() use($app) {
         $countObject = new RepeatCounter($_GET["input_word"], $_GET["input_sentence"]);
-        $results = $countObject->countRepeats();
-        return $app['twig']->render("results.twig", array('result1' => $results));
+        $exploded_sentence = explode(" ",$_GET["input_sentence"]);
+        return $app['twig']->render("results.twig", array('counterObject' => $countObject, "exploded_sentence" => $exploded_sentence));
     });
     return $app;

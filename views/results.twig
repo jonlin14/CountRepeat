@@ -1,8 +1,33 @@
 <html>
     <head>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
         <title>Results</title>
     </head>
     <body>
-        <p>The amount of apperances is {{ result1 }} </p>
+        <div class ="container">
+            <div class = "row">
+                <div class = "jumbotron">
+                    <h3>Search word:</h3>
+                    <h2><b>{{ counterObject.word}}</b></h2>
+                </div>
+                <div class = "jumbotron">
+                        <h3>Search Field</h3>
+                        {% for element in exploded_sentence %}
+                            {% if element == counterObject.word %}
+                                <font size = "7"><mark></b>{{element}}</b></mark></font>
+                            {% else %}
+                                {{element}}
+                            {% endif %}
+                        {% endfor %}
+                </div>
+                <div class = "jumbotron">
+                    <h3>Number of Apperances</h3>
+                    <h2><b>{{counterObject.countRepeats}}</b></h2>
+                </div>
+            </row>
+
+
+            </div>
+        </div>
     </body>
 </html>
