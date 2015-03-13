@@ -43,9 +43,9 @@
                     }
                 }
             }
+            return $this->getAmount();
 
         }
-        return $this->getAmount();
     }
 
 ?>

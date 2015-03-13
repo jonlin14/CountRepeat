@@ -5,9 +5,9 @@
     {
 
         function test_repeatCounter_oneLetterOneMatch() {
-            $test_repeatCounter = new RepeatCounter($input_search, $input_sentence);
             $input_search = "a";
             $input_sentence = "a";
+            $test_repeatCounter = new RepeatCounter($input_search, $input_sentence);
 
             $result = $test_repeatCounter->countRepeats();
 
@@ -15,9 +15,9 @@
         }
 
         function test_repeatCounter_twoOneLetterOneMatch() {
-            $test_repeatCounter = new RepeatCounter($input_search, $input_sentence);
             $input_search = "a";
             $input_sentence = "a b";
+            $test_repeatCounter = new RepeatCounter($input_search, $input_sentence);
 
             $result = $test_repeatCounter->countRepeats();
 
@@ -25,9 +25,9 @@
         }
 
         function test_repeatCounter_twoLetterOneMatch() {
-            $test_repeatCounter = new RepeatCounter($input_search, $input_sentence);
             $input_search = "it";
             $input_sentence = "it";
+            $test_repeatCounter = new RepeatCounter($input_search, $input_sentence);
 
             $result = $test_repeatCounter->countRepeats();
 
@@ -35,9 +35,9 @@
         }
 
         function test_repeatCounter_twoWordTwoLetterOneMatch() {
-            $test_repeatCounter = new RepeatCounter($input_search, $input_sentence);
             $input_search = "md";
             $input_sentence = "md ok";
+            $test_repeatCounter = new RepeatCounter($input_search, $input_sentence);
 
             $result = $test_repeatCounter->countRepeats();
 
@@ -45,9 +45,9 @@
         }
 
         function test_repeatCounter_twoWordsOneMatch() {
-            $test_repeatCounter = new RepeatCounter($input_search, $input_sentence);
             $input_search = "apple";
             $input_sentence = "apple appl";
+            $test_repeatCounter = new RepeatCounter($input_search, $input_sentence);
 
             $result = $test_repeatCounter->countRepeats();
 
@@ -55,9 +55,9 @@
         }
 
         function test_repeatCounter_twoWordsTwoMatch() {
-            $test_repeatCounter = new RepeatCounter($input_search, $input_sentence);
             $input_search = "orange";
             $input_sentence = "orange orange";
+            $test_repeatCounter = new RepeatCounter($input_search, $input_sentence);
 
             $result = $test_repeatCounter->countRepeats();
 
@@ -65,9 +65,9 @@
         }
 
         function test_repeatCounter_stringNoMatch() {
-            $test_repeatCounter = new RepeatCounter($input_search, $input_sentence);
             $input_search = "bacon";
             $input_sentence = "chicken wings turkey barbacue";
+            $test_repeatCounter = new RepeatCounter($input_search, $input_sentence);
 
             $result = $test_repeatCounter->countRepeats();
 
@@ -75,9 +75,9 @@
         }
 
         function test_repeatCounter_realWorld() {
-            $test_repeatCounter = new RepeatCounter($input_search, $input_sentence);
             $input_search = "you";
             $input_sentence = "Hey hey you you I don't like your girl friend. I think you should get a new one";
+            $test_repeatCounter = new RepeatCounter($input_search, $input_sentence);
 
             $result = $test_repeatCounter->countRepeats();
 
