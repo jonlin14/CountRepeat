@@ -3,6 +3,7 @@
 
         private $word;
         private $sentence;
+        private $amount_of_appearances;
 
 
         function __construct($input_word, $input_sentence) {
@@ -17,31 +18,34 @@
         function getSentence() {
             return $this->sentence;
         }
-
+        function getAmount() {
+            return $this->amount_of_appearances;
+        }
+        function amountAdd() {
+            $this->amount_of_appearances += 1;
+        }
 
         function countRepeats() {
-            $amount_of_appereances = 0;
-            $sentence_array = explode( " ", $this->sentence);
-            $array1 = array();
+
+            $sentence_array = explode( " ", $this->getSentence());
+
 
             foreach ($sentence_array as $word_in_sentence) {
                 if ((ctype_alnum($word_in_sentence)) != 1) {
                     $word_in_sentence = substr_replace($word_in_sentence,"",-1);
-                    array_push($array1, $word_in_sentence);
+                    if ($this->getWord() == $word_in_sentence) {
+                        $this->amountAdd();
+                    }
                 }
                 else {
-                    array_push($array1, $word_in_sentence);
+                    if ($this->getWord() == $word_in_sentence) {
+                        $this->amountAdd();
+                    }
                 }
             }
 
-            foreach ($array1 as $word_in_sentence) {
-                if ($this->word == $word_in_sentence) {
-                    $amount_of_appereances += 1;
-                }
-            }
-            return $amount_of_appereances;
         }
-
+        return $this->getAmount();
     }
 
 ?>
