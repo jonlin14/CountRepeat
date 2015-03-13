@@ -1,19 +1,39 @@
 Sentence String: 'a'
 Search String : 'a'
-Output: 'a'
+Output: 1 (number)
 Spec : Function will recieve a single letter string 'a' and search string 'a' and return string 'a'. 'a' is used because a single letter string is the simplest search
 
 Sentence String: 'a b'
 Search String: 'b'
-Output: 'b'
+Output: 1 (number)
 Spec: Function recieves a string of two single letter words. Function will output the second letter of that string and ignore the first.
 
 Sentence String: 'it'
 Search String: 'it'
-Output: 'it'
+Output: 1 (number)
 Spec: Function recieves one two letter word that is identical to the search string and it will output it. This test is because logic to search for a two letter string is different from searching a one letter string
 
 Sentence String: 'md ok'
 Search String: 'md'
-Output: 'md'
+Output: 1 (number)
 Spec: Use a two letter string with two words to error check that we don't return the whole string
+
+Sentence String: 'apple appl'
+Search String: 'appl'
+Output: 1 (number)
+Spec: Sentence String will be two words that are one letter apart. Error checking to make sure function isn't outputting words that are similar.
+
+Sentence String: 'apple appl'
+Search String: 'apple'
+Output: 1 (number)
+Spec: Checking for accuracy with similar words. This time returning the longer word.
+
+Sentence String: 'orange orange'
+Search String: 'orange'
+Output: 2 (number)
+Spec: Check that the counter for output is working correctly
+
+Sentence String: 'chicken wings turkey barbacue'
+Search String: 'bacon'
+Output: 0
+Spec: Check that the function will return 0 if it doesn't find any matches
