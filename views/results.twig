@@ -14,7 +14,7 @@
                         <h3>Search Field</h3>
                         {% for element in exploded_sentence %}
                             {% if element == counterObject.word %}
-                                <font size = "7"><mark></b>{{element}}</b></mark></font>
+                                <mark><b><font size="7">{{element}}</font></b></mark>
                             {% else %}
                                 {{element}}
                             {% endif %}
@@ -26,6 +26,9 @@
                 </div>
             </row>
 
+            <form action = "/">
+                <button type = "submit" class ="btn btn-success">Search Again!</button>
+            </form>
 
             </div>
         </div>

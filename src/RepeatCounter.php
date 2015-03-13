@@ -3,7 +3,7 @@
 
         private $word;
         private $sentence;
-        
+
 
         function __construct($input_word, $input_sentence) {
             $this->word = $input_word;
@@ -18,9 +18,6 @@
             return $this->sentence;
         }
 
-        function getArray() {
-            return $this->exploded_array;
-        }
 
         function countRepeats() {
             $amount_of_appereances = 0;
@@ -34,17 +31,6 @@
             return $amount_of_appereances;
         }
 
-        function marks() {
-            $sentence_array = explode( " ", $this->sentence);
-
-            foreach ($sentence_array as $word_in_sentence) {
-                if ($this->word == $word_in_sentence) {
-                    array_push($this->mark_array, ("<mark>".$word_in_sentence."</mark>"));
-                }
-                array_push($this->mark_array, $word_in_sentence);
-            }
-            return $mark_array;
-        }
     }
 
 ?>
