@@ -53,5 +53,25 @@
 
             $this->assertEquals($result, 1);
         }
+
+        function test_repeatCounter_twoWordsTwoMatch() {
+            $test_repeatCounter = new RepeatCounter;
+            $input_search = "orange";
+            $input_sentence = "orange orange";
+
+            $result = $test_repeatCounter->countRepeats($input_search, $input_sentence);
+
+            $this->assertEquals($result, 2);
+        }
+
+        function test_repeatCounter_stringNoMatch() {
+            $test_repeatCounter = new RepeatCounter;
+            $input_search = "bacon";
+            $input_sentence = "chicken wings turkey barbacue";
+
+            $result = $test_repeatCounter->countRepeats($input_search, $input_sentence);
+
+            $this->assertEquals($result, 0);
+        }
     }
 ?>
