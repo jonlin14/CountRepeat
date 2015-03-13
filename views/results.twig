@@ -3,6 +3,7 @@
         <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
         <title>Results</title>
     </head>
+
     <body>
         <div class ="container">
             <div class = "row">
@@ -10,6 +11,7 @@
                     <h3>Search word:</h3>
                     <h2><b>{{ counterObject.word}}</b></h2>
                 </div>
+
                 <div class = "jumbotron">
                         <h3>Search Field</h3>
                         {% for element in exploded_sentence %}
@@ -20,10 +22,12 @@
                             {% endif %}
                         {% endfor %}
                 </div>
+
                 <div class = "jumbotron">
                     <h3>Number of Apperances</h3>
                     <h2><b>{{counterObject.countRepeats}}</b></h2>
                 </div>
+
             </row>
 
             <form action = "/">
