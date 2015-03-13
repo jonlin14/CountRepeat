@@ -18,7 +18,7 @@
         function getSentence() {
             return $this->sentence;
         }
-        function getAmount() {
+        function getAmountAppearances() {
             return $this->amount_of_appearances;
         }
         function amountAdd() {
@@ -43,7 +43,7 @@
                     }
                 }
             }
-            return $this->getAmount();
+            return $this->getAmountAppearances();
 
         }
     }

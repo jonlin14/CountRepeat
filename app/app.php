@@ -18,3 +18,4 @@
         return $app['twig']->render("results.twig", array('counterObject' => $countObject, "exploded_sentence" => $exploded_sentence));
     });
     return $app;
+?>
