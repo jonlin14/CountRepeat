@@ -73,5 +73,15 @@
 
             $this->assertEquals($result, 0);
         }
+
+        function test_repeatCounter_realWorld() {
+            $test_repeatCounter = new RepeatCounter;
+            $input_search = "you";
+            $input_sentence = "Hey hey you you I don't like your girl friend. I think you should get a new one";
+
+            $result = $test_repeatCounter->countRepeats($input_search, $input_sentence);
+
+            $this->assertEquals($result, 3);
+        }
     }
 ?>
