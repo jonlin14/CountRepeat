@@ -13,5 +13,16 @@
 
             $this->assertEquals($result, 1);
         }
+
+        function test_repeatCounter_twoLetterOneMatch() {
+            $test_repeatCounter = new RepeatCounter;
+            $input_search = 'a';
+            $input_sentence = 'a b';
+
+            $result = $test_repeatCounter->countRepeats($input_search, $input_sentence);
+
+            $this->assertEquals($result, 1);
+        }
+
     }
 ?>
